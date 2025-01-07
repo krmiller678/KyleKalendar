@@ -22,7 +22,7 @@ int main () {
     vector<ToDo> weeklyToDos;
     mondayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
     cout << mondayEvents[0].getStartTime() << mondayEvents[0].getEndTime() << mondayEvents[0].getTitle();
-    EventWriteOut(mondayEvents, "Monday");
+    EventWriteOut(mondayEvents, "Tuesday");
     return 0;
 }
 
