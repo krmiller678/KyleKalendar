@@ -27,7 +27,7 @@
 				}
 			],
 			"type" : "STRING",
-			"value" : "Debug"
+			"value" : "Release"
 		},
 		{
 			"name" : "CMAKE_CACHEFILE_DIR",
@@ -63,7 +63,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "28"
+			"value" : "31"
 		},
 		{
 			"name" : "CMAKE_CACHE_PATCH_VERSION",
@@ -75,7 +75,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "0"
+			"value" : "3"
 		},
 		{
 			"name" : "CMAKE_COMMAND",
@@ -87,7 +87,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cmake.exe"
+			"value" : "C:/Program Files/CMake/bin/cmake.exe"
 		},
 		{
 			"name" : "CMAKE_CONFIGURATION_TYPES",
@@ -111,7 +111,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/cpack.exe"
+			"value" : "C:/Program Files/CMake/bin/cpack.exe"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -123,7 +123,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/ctest.exe"
+			"value" : "C:/Program Files/CMake/bin/ctest.exe"
 		},
 		{
 			"name" : "CMAKE_CXX_FLAGS",
@@ -819,7 +819,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "C:/Program Files/Microsoft Visual Studio/2022/Community/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-3.28"
+			"value" : "C:/Program Files/CMake/share/cmake-3.31"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
