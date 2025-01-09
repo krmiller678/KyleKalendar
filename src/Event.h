@@ -8,7 +8,7 @@ class Event{
         std::string _title;
     public:
         // Constructor
-        Event(std::string startTime, std::string endTime, std::string title)
+        Event(std::string startTime = "0", std::string endTime = "0", std::string title = "NA")
             : _startTime{startTime}, _endTime{endTime}, _title{title} 
             {}
 

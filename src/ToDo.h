@@ -7,8 +7,8 @@ class ToDo{
         bool _crossOut;
     public:
         // Constructor
-        ToDo(std::string title)
-            : _title{title}, _crossOut(false)
+        ToDo(std::string title, bool crossout = false)
+            : _title{title}, _crossOut(crossout)
             {}
 
         // Getters

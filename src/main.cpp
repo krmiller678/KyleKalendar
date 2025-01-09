@@ -14,9 +14,10 @@ Inspired by Kyle's Office Chalkboard :D
 */
 
 void EventReadIn(vector<Event>& dailyEvents, string dayOfWeek);
-void ToDoReadIn(vector<Event>& toDos);
 void EventWriteOut(vector<Event>& dailyEvents, string dayOfWeek);
-void ToDoWriteOut(vector<Event>& dailyEvents, string toDoCategory);
+
+void ToDoReadIn(vector<ToDo>& toDos, string toDoCategory);
+void ToDoWriteOut(vector<ToDo>& toDos, string toDoCategory);
 
 int main () {
     vector<Event> mondayEvents;
@@ -39,6 +40,10 @@ int main () {
     EventReadIn(saturdayEvents, "Saturday");
     EventReadIn(sundayEvents, "Sunday");
 
+    ToDoReadIn(weeklyToDos, "Weekly");
+    ToDoReadIn(financialToDos, "Financial");
+    ToDoReadIn(personalToDos, "Personal");
+
     mondayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
     tuesdayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
     wednesdayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
@@ -46,7 +51,7 @@ int main () {
     fridayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
     saturdayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
     sundayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
-    
+
     EventWriteOut(mondayEvents, "Monday");
     EventWriteOut(tuesdayEvents, "Tuesday");
     EventWriteOut(wednesdayEvents, "Wednesday");
@@ -54,6 +59,16 @@ int main () {
     EventWriteOut(fridayEvents, "Friday");
     EventWriteOut(saturdayEvents, "Saturday");
     EventWriteOut(sundayEvents, "Sunday");
+
+    weeklyToDos.push_back(ToDo("test"));
+    financialToDos.push_back(ToDo("test"));
+    personalToDos.push_back(ToDo("test"));
+
+    ToDoWriteOut(weeklyToDos, "Weekly");
+    ToDoWriteOut(financialToDos, "Financial");
+    ToDoWriteOut(personalToDos, "Personal");
+
+
 
     return 0;
 }
@@ -88,5 +103,37 @@ void EventReadIn(vector<Event>& dailyEvents, string dayOfWeek) {
         getline(ss, title); 
 
         dailyEvents.push_back(Event(start,end,title));
+    }
+}
+
+void ToDoWriteOut(vector<ToDo>& toDos, string toDoCategory) {
+    string fullPath = "toDos/" + toDoCategory + ".txt";
+    ofstream outputFile(fullPath);
+    if (outputFile.is_open()) {
+        for (const ToDo& toDo : toDos) {
+            outputFile << toDo.getTitle() << "," << toDo.getCrossOut() << '\n';
+        }
+    }
+    else {
+        try {
+            throw invalid_argument( "error opening file. \n");
+        }
+        catch (invalid_argument& e) {
+            cout << "Caught exception: " << e.what() << '\n';
+        }
+    }
+}
+
+void ToDoReadIn(vector<ToDo>& toDos, string toDoCategory) {
+    string fullPath = "toDos/" + toDoCategory + ".txt";
+    ifstream inputFile(fullPath);
+    string line;
+    while (getline(inputFile, line)) {
+        stringstream ss(line);
+        string title, crossout;
+        getline(ss, title,','); 
+        getline(ss, crossout,','); 
+
+        toDos.push_back(ToDo(title,(crossout != "0")));
     }
 }
