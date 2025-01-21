@@ -1,0 +1,9 @@
+# ninja log v6
+7	678	7591972670854461	KyleKalendarQt_autogen/timestamp	1ca966b3def63845
+7	678	7591972670854461	KyleKalendarQt_autogen/mocs_compilation.cpp	1ca966b3def63845
+7	678	7591972670854461	Z:/KyleKalendar/KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Release/KyleKalendarQt_autogen/timestamp	1ca966b3def63845
+7	678	7591972670854461	Z:/KyleKalendar/KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Release/KyleKalendarQt_autogen/mocs_compilation.cpp	1ca966b3def63845
+684	1752	7591972671510555	CMakeFiles/KyleKalendarQt.dir/KyleKalendarQt_autogen/mocs_compilation.cpp.obj	a4db3c9000f7585b
+711	1990	7591972671783014	CMakeFiles/KyleKalendarQt.dir/mainwindow.cpp.obj	37320836693ef00d
+698	2194	7591972671653865	CMakeFiles/KyleKalendarQt.dir/main.cpp.obj	9e3391de3f199a50
+2203	2358	7591972686701900	KyleKalendarQt.exe	48d9741931bb5d51

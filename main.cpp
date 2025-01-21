@@ -1,25 +1,10 @@
-#include <QApplication>
-#include <iostream>
-#include <vector>
-#include <fstream>
-#include <sstream>
-#include <exception>
 #include "mainwindow.h"
-#include "Event.h"
-#include "ToDo.h"
-using namespace std;
 
 /*
 This program is designed to serve as a weekly calendar to keep track of important events,
 enable a to-do list to be constructed from stored memory, and keep track of long term goals.
 Inspired by Kyle's Office Chalkboard :D
 */
-
-void EventReadIn(vector<Event>& dailyEvents, string dayOfWeek);
-void EventWriteOut(vector<Event>& dailyEvents, string dayOfWeek);
-
-void ToDoReadIn(vector<ToDo>& toDos, string toDoCategory);
-void ToDoWriteOut(vector<ToDo>& toDos, string toDoCategory);
 
 int main(int argc, char *argv[])
 {
@@ -29,29 +14,6 @@ int main(int argc, char *argv[])
     w.show();
 
     // Note to self -> definitely want to convert all this into an unordered_map at some point with days as keys
-    vector<Event> mondayEvents;
-    vector<Event> tuesdayEvents;
-    vector<Event> wednesdayEvents;
-    vector<Event> thursdayEvents;
-    vector<Event> fridayEvents;
-    vector<Event> saturdayEvents;
-    vector<Event> sundayEvents;
-
-    vector<ToDo> weeklyToDos;
-    vector<ToDo> financialToDos;
-    vector<ToDo> personalToDos;
-
-    EventReadIn(mondayEvents, "Monday");
-    EventReadIn(tuesdayEvents, "Tuesday");
-    EventReadIn(wednesdayEvents, "Wednesday");
-    EventReadIn(thursdayEvents, "Thursday");
-    EventReadIn(fridayEvents, "Friday");
-    EventReadIn(saturdayEvents, "Saturday");
-    EventReadIn(sundayEvents, "Sunday");
-
-    ToDoReadIn(weeklyToDos, "Weekly");
-    ToDoReadIn(financialToDos, "Financial");
-    ToDoReadIn(personalToDos, "Personal");
 
     //mondayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
     //tuesdayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
@@ -77,84 +39,5 @@ int main(int argc, char *argv[])
     //ToDoWriteOut(financialToDos, "Financial");
     //ToDoWriteOut(personalToDos, "Personal");
 
-    for (unsigned int i = 0; i < personalToDos.size(); i++) {
-         w.AddItemImportant(personalToDos[i].GetTitle());
-    }
-    for (unsigned int i = 0; i < weeklyToDos.size(); i++) {
-        w.AddItemWeekly(weeklyToDos[i].GetTitle());
-    }
-    for (unsigned int i = 0; i < financialToDos.size(); i++) {
-        w.AddItemFinancial(financialToDos[i].GetTitle());
-    }
-    for (unsigned int i = 0; i < financialToDos.size(); i++) {
-        w.AddItemDaily(mondayEvents[i].GetTitle());
-    }
-
-
     return a.exec();
-}
-
-void EventWriteOut(vector<Event>& dailyEvents, string dayOfWeek) {
-    string fullPath = "events/" + dayOfWeek + ".txt";
-    ofstream outputFile(fullPath);
-    if (outputFile.is_open()) {
-        for (const Event& event : dailyEvents) {
-            outputFile << event.GetStartTime() << ',' << event.GetEndTime() << ',' << event.GetTitle() << '\n';
-        }
-    }
-    else {
-        try {
-            throw invalid_argument( "error opening file. \n");
-        }
-        catch (invalid_argument& e) {
-            cout << "Caught exception: " << e.what() << '\n';
-        }
-    }
-}
-
-void EventReadIn(vector<Event>& dailyEvents, string dayOfWeek) {
-    string fullPath = "events/" + dayOfWeek + ".txt";
-    ifstream inputFile(fullPath);
-    string line;
-    while (getline(inputFile, line)) {
-        stringstream ss(line);
-        string start, end, title;
-        getline(ss, start,',');
-        getline(ss, end,',');
-        getline(ss, title);
-
-        dailyEvents.push_back(Event(start,end,title));
-    }
-}
-
-void ToDoWriteOut(vector<ToDo>& toDos, string toDoCategory) {
-    string fullPath = "toDos/" + toDoCategory + ".txt";
-    ofstream outputFile(fullPath);
-    if (outputFile.is_open()) {
-        for (const ToDo& toDo : toDos) {
-            outputFile << toDo.GetTitle() << "," << toDo.GetCrossOut() << '\n';
-        }
-    }
-    else {
-        try {
-            throw invalid_argument( "error opening file. \n");
-        }
-        catch (invalid_argument& e) {
-            cout << "Caught exception: " << e.what() << '\n';
-        }
-    }
-}
-
-void ToDoReadIn(vector<ToDo>& toDos, string toDoCategory) {
-    string fullPath = "toDos/" + toDoCategory + ".txt";
-    ifstream inputFile(fullPath);
-    string line;
-    while (getline(inputFile, line)) {
-        stringstream ss(line);
-        string title, crossout;
-        getline(ss, title,',');
-        getline(ss, crossout,',');
-
-        toDos.push_back(ToDo(title,(crossout != "0")));
-    }
 }

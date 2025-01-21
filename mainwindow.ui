@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>803</width>
+    <height>593</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>150</y>
+      <y>170</y>
       <width>261</width>
       <height>401</height>
      </rect>
@@ -31,20 +31,21 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>20</y>
+      <y>40</y>
       <width>261</width>
       <height>111</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 10pt &quot;Segoe UI&quot;;</string>
+     <string notr="true">font: 10pt &quot;Segoe UI&quot;;
+text-decoration: line-through;</string>
     </property>
    </widget>
    <widget class="QListWidget" name="DailyEvents">
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>150</y>
+      <y>170</y>
       <width>541</width>
       <height>401</height>
      </rect>
@@ -57,7 +58,7 @@
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>20</y>
+      <y>40</y>
       <width>541</width>
       <height>111</height>
      </rect>
@@ -66,11 +67,11 @@
      <string notr="true">font: 10pt &quot;Segoe UI&quot;;</string>
     </property>
    </widget>
-   <widget class="QLabel" name="label_3">
+   <widget class="QLabel" name="ImportantDatesLabel">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>0</y>
+      <y>20</y>
       <width>261</width>
       <height>21</height>
      </rect>
@@ -88,11 +89,11 @@ color:white;</string>
      <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_5">
+   <widget class="QLabel" name="WeeklyToDoLabel">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>130</y>
+      <y>150</y>
       <width>261</width>
       <height>21</height>
      </rect>
@@ -110,11 +111,11 @@ color:white;</string>
      <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_6">
+   <widget class="QLabel" name="DailyAgendaLabel">
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>130</y>
+      <y>150</y>
       <width>541</width>
       <height>21</height>
      </rect>
@@ -132,11 +133,11 @@ color:white;</string>
      <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QLabel" name="label_7">
+   <widget class="QLabel" name="FinancialLabel">
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>0</y>
+      <y>20</y>
       <width>541</width>
       <height>21</height>
      </rect>
@@ -154,72 +155,103 @@ color:white;</string>
      <set>Qt::AlignmentFlag::AlignCenter</set>
     </property>
    </widget>
+   <widget class="QPushButton" name="Sunday">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SUNDAY</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Monday">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>0</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>MONDAY</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Tuesday">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>0</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>TUESDAY</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Wednesday">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>0</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>WEDNESDAY</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Thursday">
+    <property name="geometry">
+     <rect>
+      <x>440</x>
+      <y>0</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>THURSDAY</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Friday">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>0</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>FRIDAY</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Saturday">
+    <property name="geometry">
+     <rect>
+      <x>660</x>
+      <y>0</y>
+      <width>111</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>SATURDAY</string>
+    </property>
+   </widget>
   </widget>
-  <widget class="QMenuBar" name="menubar">
-   <property name="geometry">
-    <rect>
-     <x>0</x>
-     <y>0</y>
-     <width>800</width>
-     <height>21</height>
-    </rect>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="mouseTracking">
+    <bool>false</bool>
    </property>
-   <widget class="QMenu" name="menuKyleKalendar">
-    <property name="title">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuMonday">
-    <property name="title">
-     <string>Monday</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuTuesday">
-    <property name="title">
-     <string>Tuesday</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuWednesday">
-    <property name="title">
-     <string>Wednesday</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuThursday">
-    <property name="title">
-     <string>Thursday</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuFriday">
-    <property name="title">
-     <string>Friday</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuSaturday">
-    <property name="title">
-     <string>Saturday</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuSunday">
-    <property name="title">
-     <string>Sunday</string>
-    </property>
-   </widget>
-   <widget class="QMenu" name="menuFirstTimeSetup">
-    <property name="title">
-     <string>FirstTimeSetup</string>
-    </property>
-   </widget>
-   <addaction name="menuKyleKalendar"/>
-   <addaction name="menuFirstTimeSetup"/>
-   <addaction name="menuSunday"/>
-   <addaction name="menuMonday"/>
-   <addaction name="menuTuesday"/>
-   <addaction name="menuWednesday"/>
-   <addaction name="menuThursday"/>
-   <addaction name="menuFriday"/>
-   <addaction name="menuSaturday"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <resources/>
  <connections/>
