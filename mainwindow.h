@@ -2,6 +2,8 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <string>
+#include <QString>
 
 QT_BEGIN_NAMESPACE
 namespace Ui {
@@ -16,6 +18,15 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+
+    // Setters
+    void AddItemImportant(std::string toAdd);
+    void AddItemWeekly(std::string toAdd);
+    void AddItemFinancial(std::string toAdd);
+    void AddItemDaily(std::string toAdd);
+
+    // Getters
+
 
 private:
     Ui::MainWindow *ui;

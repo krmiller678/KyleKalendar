@@ -17,6 +17,8 @@ set(PROJECT_SOURCES
         mainwindow.cpp
         mainwindow.h
         mainwindow.ui
+        Event.h
+        ToDo.h
 )
 
 if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
@@ -41,6 +43,10 @@ else()
         )
     endif()
 endif()
+
+# Add in directory to store events and toDos
+file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/events)
+file(MAKE_DIRECTORY ${CMAKE_BINARY_DIR}/toDos)
 
 target_link_libraries(KyleKalendarQt PRIVATE Qt${QT_VERSION_MAJOR}::Widgets)
 

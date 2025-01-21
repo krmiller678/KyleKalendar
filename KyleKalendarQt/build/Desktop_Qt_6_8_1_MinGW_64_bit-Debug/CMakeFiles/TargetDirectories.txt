@@ -1,0 +1,9 @@
+Z:/KyleKalendar/KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/KyleKalendarQt.dir
+Z:/KyleKalendar/KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+Z:/KyleKalendar/KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+Z:/KyleKalendar/KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+Z:/KyleKalendar/KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/install.dir
+Z:/KyleKalendar/KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+Z:/KyleKalendar/KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+Z:/KyleKalendar/KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/KyleKalendarQt_autogen_timestamp_deps.dir
+Z:/KyleKalendar/KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/CMakeFiles/KyleKalendarQt_autogen.dir

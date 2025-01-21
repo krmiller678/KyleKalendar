@@ -13,7 +13,148 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
-  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QListWidget" name="WeeklyToDo">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>150</y>
+      <width>261</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;Segoe UI&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="ImportantDates">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>20</y>
+      <width>261</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;Segoe UI&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="DailyEvents">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>150</y>
+      <width>541</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;Segoe UI&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QListWidget" name="FinancialToDo">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>20</y>
+      <width>541</width>
+      <height>111</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 10pt &quot;Segoe UI&quot;;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Segoe UI&quot;;
+text-align:center;
+background-color:regb(255,0,0);
+color:white;</string>
+    </property>
+    <property name="text">
+     <string>Important Dates</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_5">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>130</y>
+      <width>261</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Segoe UI&quot;;
+text-align:center;
+background-color:regb(255,0,0);
+color:white;</string>
+    </property>
+    <property name="text">
+     <string>Weekly ToDo</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>130</y>
+      <width>541</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Segoe UI&quot;;
+text-align:center;
+background-color:regb(255,0,0);
+color:white;</string>
+    </property>
+    <property name="text">
+     <string>Daily Agenda</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_7">
+    <property name="geometry">
+     <rect>
+      <x>260</x>
+      <y>0</y>
+      <width>541</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">font: 12pt &quot;Segoe UI&quot;;
+text-align:center;
+background-color:regb(255,0,0);
+color:white;</string>
+    </property>
+    <property name="text">
+     <string>Financial ToDo</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignmentFlag::AlignCenter</set>
+    </property>
+   </widget>
+  </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
@@ -23,6 +164,60 @@
      <height>21</height>
     </rect>
    </property>
+   <widget class="QMenu" name="menuKyleKalendar">
+    <property name="title">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuMonday">
+    <property name="title">
+     <string>Monday</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuTuesday">
+    <property name="title">
+     <string>Tuesday</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuWednesday">
+    <property name="title">
+     <string>Wednesday</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuThursday">
+    <property name="title">
+     <string>Thursday</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuFriday">
+    <property name="title">
+     <string>Friday</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuSaturday">
+    <property name="title">
+     <string>Saturday</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuSunday">
+    <property name="title">
+     <string>Sunday</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuFirstTimeSetup">
+    <property name="title">
+     <string>FirstTimeSetup</string>
+    </property>
+   </widget>
+   <addaction name="menuKyleKalendar"/>
+   <addaction name="menuFirstTimeSetup"/>
+   <addaction name="menuSunday"/>
+   <addaction name="menuMonday"/>
+   <addaction name="menuTuesday"/>
+   <addaction name="menuWednesday"/>
+   <addaction name="menuThursday"/>
+   <addaction name="menuFriday"/>
+   <addaction name="menuSaturday"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>

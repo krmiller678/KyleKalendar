@@ -1,0 +1,79 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-1d4c412d2157f7c70089.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "KyleKalendarQt",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "KyleKalendarQt::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-KyleKalendarQt-Debug-bea4590d16745fc51f5a.json",
+					"name" : "KyleKalendarQt",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "KyleKalendarQt_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-KyleKalendarQt_autogen-Debug-f04aaa755eb7ce645bf1.json",
+					"name" : "KyleKalendarQt_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "KyleKalendarQt_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-KyleKalendarQt_autogen_timestamp_deps-Debug-a8913d0387201c80395c.json",
+					"name" : "KyleKalendarQt_autogen_timestamp_deps",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "Z:/KyleKalendar/KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug",
+		"source" : "Z:/KyleKalendar"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
