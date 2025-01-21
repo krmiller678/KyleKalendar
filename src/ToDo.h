@@ -12,10 +12,10 @@ class ToDo{
             {}
 
         // Getters
-        std::string getTitle() const {return _title;}
-        bool getCrossOut() const {return _crossOut;}
+        std::string GetTitle() const {return _title;}
+        bool GetCrossOut() const {return _crossOut;}
 
         // Mutators
-        void editTitle(std::string newTitle) {_title = newTitle;}
-        void flipCrossOut() {_crossOut = !_crossOut;}
+        void EditTitle(std::string newTitle) {_title = newTitle;}
+        void FlipCrossOut() {_crossOut = !_crossOut;}
 };

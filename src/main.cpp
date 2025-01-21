@@ -20,6 +20,8 @@ void ToDoReadIn(vector<ToDo>& toDos, string toDoCategory);
 void ToDoWriteOut(vector<ToDo>& toDos, string toDoCategory);
 
 int main () {
+
+    // Note to self -> definitely want to convert all this into an unordered_map at some point with days as keys
     vector<Event> mondayEvents;
     vector<Event> tuesdayEvents;
     vector<Event> wednesdayEvents;
@@ -78,7 +80,7 @@ void EventWriteOut(vector<Event>& dailyEvents, string dayOfWeek) {
     ofstream outputFile(fullPath);
     if (outputFile.is_open()) {
         for (const Event& event : dailyEvents) {
-            outputFile << event.getStartTime() << ',' << event.getEndTime() << ',' << event.getTitle() << '\n';
+            outputFile << event.GetStartTime() << ',' << event.GetEndTime() << ',' << event.GetTitle() << '\n';
         }
     }
     else {
@@ -111,7 +113,7 @@ void ToDoWriteOut(vector<ToDo>& toDos, string toDoCategory) {
     ofstream outputFile(fullPath);
     if (outputFile.is_open()) {
         for (const ToDo& toDo : toDos) {
-            outputFile << toDo.getTitle() << "," << toDo.getCrossOut() << '\n';
+            outputFile << toDo.GetTitle() << "," << toDo.GetCrossOut() << '\n';
         }
     }
     else {

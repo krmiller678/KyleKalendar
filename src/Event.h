@@ -13,12 +13,12 @@ class Event{
             {}
 
         // Getters
-        std::string getStartTime() const {return _startTime;}
-        std::string getEndTime() const {return _endTime;}
-        std::string getTitle() const {return _title;}
+        std::string GetStartTime() const {return _startTime;}
+        std::string GetEndTime() const {return _endTime;}
+        std::string GetTitle() const {return _title;}
 
         // Mutators
-        void editStartTime(std::string newStart) {_startTime = newStart;}
-        void editEndTime(std::string newEnd) {_endTime = newEnd;}
-        void editTitle(std::string newTitle) {_title = newTitle;}
+        void EditStartTime(std::string newStart) {_startTime = newStart;}
+        void EditEndTime(std::string newEnd) {_endTime = newEnd;}
+        void EditTitle(std::string newTitle) {_title = newTitle;}
 };
