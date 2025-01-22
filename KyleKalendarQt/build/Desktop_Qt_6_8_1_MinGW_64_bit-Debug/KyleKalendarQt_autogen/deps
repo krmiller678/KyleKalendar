@@ -570,5 +570,6 @@ KyleKalendarQt_autogen/timestamp: \
 	Z:/KyleKalendar/main.cpp \
 	Z:/KyleKalendar/mainwindow.cpp \
 	Z:/KyleKalendar/mainwindow.h \
+	Z:/KyleKalendar/resources.qrc \
 	Z:/KyleKalendar/mainwindow.ui \
 	C:/Qt/Tools/CMake_64/bin/cmake.exe

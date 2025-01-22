@@ -51,7 +51,7 @@
 			{
 				"command" : 3,
 				"file" : 1,
-				"line" : 23,
+				"line" : 25,
 				"parent" : 0
 			},
 			{
@@ -75,13 +75,13 @@
 			{
 				"command" : 4,
 				"file" : 1,
-				"line" : 62,
+				"line" : 69,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 1,
-				"line" : 45,
+				"line" : 52,
 				"parent" : 0
 			},
 			{
@@ -364,7 +364,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				10
 			]
 		}
 	],
@@ -487,7 +488,8 @@
 			[
 				0,
 				1,
-				2
+				2,
+				10
 			]
 		},
 		{
@@ -495,7 +497,9 @@
 			"sourceIndexes" : 
 			[
 				3,
-				5
+				5,
+				6,
+				8
 			]
 		},
 		{
@@ -506,17 +510,25 @@
 			]
 		},
 		{
+			"name" : "Resources",
+			"sourceIndexes" : 
+			[
+				7
+			]
+		},
+		{
 			"name" : "",
 			"sourceIndexes" : 
 			[
-				6
+				9
 			]
 		},
 		{
 			"name" : "CMake Rules",
 			"sourceIndexes" : 
 			[
-				7
+				11,
+				12
 			]
 		}
 	],
@@ -552,6 +564,21 @@
 			"sourceGroupIndex" : 2
 		},
 		{
+			"backtrace" : 4,
+			"path" : "Event.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "ToDo.h",
+			"sourceGroupIndex" : 1
+		},
+		{
+			"backtrace" : 4,
+			"path" : "resources.qrc",
+			"sourceGroupIndex" : 3
+		},
+		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/KyleKalendarQt_autogen/include/ui_mainwindow.h",
@@ -561,13 +588,26 @@
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/KyleKalendarQt_autogen/timestamp",
-			"sourceGroupIndex" : 3
+			"sourceGroupIndex" : 4
+		},
+		{
+			"backtrace" : 0,
+			"compileGroupIndex" : 0,
+			"isGenerated" : true,
+			"path" : "KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/KyleKalendarQt_autogen/EWIEGA46WW/qrc_resources.cpp",
+			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 0,
 			"isGenerated" : true,
 			"path" : "KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/KyleKalendarQt_autogen/timestamp.rule",
-			"sourceGroupIndex" : 4
+			"sourceGroupIndex" : 5
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "KyleKalendarQt/build/Desktop_Qt_6_8_1_MinGW_64_bit-Debug/KyleKalendarQt_autogen/EWIEGA46WW/qrc_resources.cpp.rule",
+			"sourceGroupIndex" : 5
 		}
 	],
 	"type" : "EXECUTABLE"

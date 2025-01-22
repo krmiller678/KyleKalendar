@@ -32,12 +32,23 @@ public:
 
     // Getters
 
+signals:
+    void EnterKeyPressed();  // Declare the signal
 
 private slots:
+    // Daily selector
     void on_Sunday_clicked();
+    void on_Monday_clicked();
+    void on_Tuesday_clicked();
+    void on_Wednesday_clicked();
+    void on_Thursday_clicked();
+    void on_Friday_clicked();
+    void on_Saturday_clicked();
+
+    void on_ImportantDates_itemDoubleClicked(QListWidgetItem *item);
 
 private:
-    // private variables
+    // private variables - dailyEvents and toDos
     std::vector<Event> mondayEvents;
     std::vector<Event> tuesdayEvents;
     std::vector<Event> wednesdayEvents;
@@ -49,6 +60,11 @@ private:
     std::vector<ToDo> weeklyToDos;
     std::vector<ToDo> financialToDos;
     std::vector<ToDo> personalToDos;
+
+    std::vector<Event> currentDay = sundayEvents;
+
+    QString GetNewInputImportant();
+    void keyPressEvent(QKeyEvent* event);
 
     Ui::MainWindow *ui;
 
