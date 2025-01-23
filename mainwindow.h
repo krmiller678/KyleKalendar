@@ -25,12 +25,10 @@ public:
     ~MainWindow();
 
     // Setters
-    void AddItemImportant(std::string toAdd);
-    void AddItemWeekly(std::string toAdd);
-    void AddItemFinancial(std::string toAdd);
+    void AddItemImportant(std::vector<ToDo>& toDos);
+    void AddItemWeekly(std::vector<ToDo>& toDos);
+    void AddItemFinancial(std::vector<ToDo>& toDos);
     void AddItemDaily(std::string toAdd);
-
-    // Getters
 
 signals:
     void EnterKeyPressed();  // Declare the signal
@@ -47,6 +45,20 @@ private slots:
 
     void on_ImportantDates_itemDoubleClicked(QListWidgetItem *item);
 
+    void on_FinancialToDo_itemDoubleClicked(QListWidgetItem *item);
+
+    void on_WeeklyToDo_itemDoubleClicked(QListWidgetItem *item);
+
+    void on_DailyEvents_itemDoubleClicked(QListWidgetItem *item);
+
+    void on_AddImportant_clicked();
+
+    void on_AddFinancial_clicked();
+
+    void on_AddDaily_clicked();
+
+    void on_AddWeekly_clicked();
+
 private:
     // private variables - dailyEvents and toDos
     std::vector<Event> mondayEvents;
@@ -61,17 +73,25 @@ private:
     std::vector<ToDo> financialToDos;
     std::vector<ToDo> personalToDos;
 
-    std::vector<Event> currentDay = sundayEvents;
+    std::vector<Event>* currentDay;
 
-    QString GetNewInputImportant();
-    void keyPressEvent(QKeyEvent* event) override;
+    QString GetNewInputImportant(); // helper function for editing events and todos
+    QString GetNewInputFinancial();
+    QString GetNewInputWeekly();
+    QString GetNewInputDaily();
+
+    void keyPressEvent(QKeyEvent* event) override; // key sensing
+
+    void writeBackDailyChange(); // helper function for day changes
+    void writeBackFinancial();
+    void writeBackPersonal();
+    void writeBackWeekly();
 
     Ui::MainWindow *ui;
 
     // pulled over from main -> read in and write out functions
     void EventReadIn(std::vector<Event>& dailyEvents, std::string dayOfWeek);
     void EventWriteOut(std::vector<Event>& dailyEvents, std::string dayOfWeek);
-
     void ToDoReadIn(std::vector<ToDo>& toDos, std::string toDoCategory);
     void ToDoWriteOut(std::vector<ToDo>& toDos, std::string toDoCategory);
 };

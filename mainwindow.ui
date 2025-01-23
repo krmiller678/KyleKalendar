@@ -24,8 +24,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">
-</string>
+    <string notr="true"/>
    </property>
    <widget class="QListWidget" name="WeeklyToDo">
     <property name="geometry">
@@ -347,7 +346,7 @@ color:white;</string>
      <iconset theme="QIcon::ThemeIcon::ListAdd"/>
     </property>
    </widget>
-   <widget class="QPushButton" name="AddImportant_2">
+   <widget class="QPushButton" name="AddFinancial">
     <property name="geometry">
      <rect>
       <x>780</x>
@@ -369,7 +368,7 @@ color:white;</string>
      <iconset theme="QIcon::ThemeIcon::ListAdd"/>
     </property>
    </widget>
-   <widget class="QPushButton" name="AddImportant_3">
+   <widget class="QPushButton" name="AddDaily">
     <property name="geometry">
      <rect>
       <x>780</x>
@@ -391,7 +390,7 @@ color:white;</string>
      <iconset theme="QIcon::ThemeIcon::ListAdd"/>
     </property>
    </widget>
-   <widget class="QPushButton" name="AddImportant_4">
+   <widget class="QPushButton" name="AddWeekly">
     <property name="geometry">
      <rect>
       <x>240</x>
