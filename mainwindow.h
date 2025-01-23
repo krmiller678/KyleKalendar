@@ -64,7 +64,7 @@ private:
     std::vector<Event> currentDay = sundayEvents;
 
     QString GetNewInputImportant();
-    void keyPressEvent(QKeyEvent* event);
+    void keyPressEvent(QKeyEvent* event) override;
 
     Ui::MainWindow *ui;
 

@@ -31,6 +31,32 @@ MainWindow::MainWindow(QWidget *parent)
     ui->WeeklyEdit->setVisible(false);
     ui->ImportantEdit->setVisible(false);
 
+    // Note to self -> definitely want to convert all this into an unordered_map at some point with days as keys
+
+    mondayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
+    tuesdayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
+    wednesdayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
+    thursdayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
+    fridayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
+    saturdayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
+    sundayEvents.push_back(Event("11 am to ", "12 pm: ", "NapTime!"));
+
+    //EventWriteOut(mondayEvents, "Monday");
+    //EventWriteOut(tuesdayEvents, "Tuesday");
+    //EventWriteOut(wednesdayEvents, "Wednesday");
+    //EventWriteOut(thursdayEvents, "Thursday");
+    //EventWriteOut(fridayEvents, "Friday");
+    //EventWriteOut(saturdayEvents, "Saturday");
+    //EventWriteOut(sundayEvents, "Sunday");
+
+    weeklyToDos.push_back(ToDo("test"));
+    financialToDos.push_back(ToDo("test"));
+    personalToDos.push_back(ToDo("test"));
+
+    //ToDoWriteOut(weeklyToDos, "Weekly");
+    //ToDoWriteOut(financialToDos, "Financial");
+    //ToDoWriteOut(personalToDos, "Personal");
+
     for (unsigned int i = 0; i < personalToDos.size(); i++) {
         AddItemImportant(personalToDos[i].GetTitle());
     }
@@ -235,5 +261,19 @@ void MainWindow::keyPressEvent(QKeyEvent* event) {
             }
         }
     }
+    if (event->key() == Qt::Key_Shift) {
+        // Get the widget that currently has focus
+        QWidget* focusedWidget = this->focusWidget();
+        // Check if the focused widget is a QListWidget
+        if (QListWidget* listWidget = qobject_cast<QListWidget*>(focusedWidget)) {
+            QListWidgetItem* selectedItem = listWidget->currentItem();  // Get the selected item
+            if (selectedItem) {
+                auto f = selectedItem->font();
+                f.setStrikeOut(!f.strikeOut());
+                selectedItem->setFont(f);  // Strikeout the selected item
+            }
+        }
+    }
+
     QMainWindow::keyPressEvent(event);  // Pass the event to the base class
 }
