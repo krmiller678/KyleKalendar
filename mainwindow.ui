@@ -20,7 +20,9 @@
    <bool>false</bool>
   </property>
   <property name="styleSheet">
-   <string notr="true"/>
+   <string notr="true">font: 12pt &quot;OCR A&quot;;
+color: rgb(0, 255, 0);
+background-color: rgb(40, 40, 40);</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
@@ -36,7 +38,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Segoe UI&quot;;</string>
+     <string notr="true">font: 12pt &quot;OCR A&quot;;</string>
     </property>
    </widget>
    <widget class="QListWidget" name="ImportantDates">
@@ -49,7 +51,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+     <string notr="true">font: 12pt &quot;OCR A&quot;;</string>
     </property>
    </widget>
    <widget class="QListWidget" name="DailyEvents">
@@ -65,7 +67,7 @@
      <bool>false</bool>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 14pt &quot;Segoe UI&quot;;</string>
+     <string notr="true">font: 12pt &quot;OCR A&quot;;</string>
     </property>
    </widget>
    <widget class="QListWidget" name="FinancialToDo">
@@ -78,7 +80,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+     <string notr="true">font: 12pt &quot;OCR A&quot;;</string>
     </property>
    </widget>
    <widget class="QLabel" name="ImportantDatesLabel">
@@ -91,7 +93,7 @@
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Segoe UI&quot;;
+     <string notr="true">font: 12pt &quot;OCR A&quot;;
 text-align:center;
 background-color:regb(255,0,0);
 color:white;</string>
@@ -113,7 +115,7 @@ color:white;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Segoe UI&quot;;
+     <string notr="true">font: 12pt &quot;OCR A&quot;;
 text-align:center;
 background-color:regb(255,0,0);
 color:white;</string>
@@ -135,7 +137,7 @@ color:white;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Segoe UI&quot;;
+     <string notr="true">font: 12pt &quot;OCR A&quot;;
 text-align:center;
 background-color:regb(255,0,0);
 color:white;</string>
@@ -157,7 +159,7 @@ color:white;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Segoe UI&quot;;
+     <string notr="true">font: 12pt &quot;OCR A&quot;;
 text-align:center;
 background-color:regb(255,0,0);
 color:white;</string>
@@ -181,6 +183,9 @@ color:white;</string>
     <property name="text">
      <string>SUNDAY</string>
     </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QPushButton" name="Monday">
     <property name="geometry">
@@ -193,6 +198,12 @@ color:white;</string>
     </property>
     <property name="text">
      <string>MONDAY</string>
+    </property>
+    <property name="checkable">
+     <bool>false</bool>
+    </property>
+    <property name="autoExclusive">
+     <bool>false</bool>
     </property>
    </widget>
    <widget class="QPushButton" name="Tuesday">
@@ -259,18 +270,21 @@ color:white;</string>
     <property name="text">
      <string>SATURDAY</string>
     </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
    </widget>
    <widget class="QLineEdit" name="ImportantEdit">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>40</y>
+      <y>10</y>
       <width>231</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+     <string notr="true">font: 12pt &quot;OCR A&quot;;</string>
     </property>
     <property name="placeholderText">
      <string>Enter your new item</string>
@@ -280,7 +294,7 @@ color:white;</string>
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>40</y>
+      <y>10</y>
       <width>251</width>
       <height>31</height>
      </rect>
@@ -296,13 +310,13 @@ color:white;</string>
     <property name="geometry">
      <rect>
       <x>260</x>
-      <y>170</y>
+      <y>140</y>
       <width>251</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+     <string notr="true">font: 12pt &quot;OCR A&quot;;</string>
     </property>
     <property name="placeholderText">
      <string>Enter your new item</string>
@@ -312,13 +326,13 @@ color:white;</string>
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>170</y>
+      <y>140</y>
       <width>231</width>
       <height>31</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+     <string notr="true">font: 12pt &quot;OCR A&quot;;</string>
     </property>
     <property name="placeholderText">
      <string>Enter your new item</string>

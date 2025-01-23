@@ -167,6 +167,8 @@ void MainWindow::ToDoReadIn(vector<ToDo>& toDos, string toDoCategory) {
 // Day of the week changed -> change current day and write back to vector
 void MainWindow::on_Sunday_clicked()
 {
+    resetDayFont();
+    ui->Sunday->setFlat(true);
     writeBackDailyChange();
     currentDay = &sundayEvents;
     ui->DailyEvents->clear();
@@ -176,6 +178,8 @@ void MainWindow::on_Sunday_clicked()
 }
 void MainWindow::on_Monday_clicked()
 {
+    resetDayFont();
+    ui->Monday->setFlat(true);
     writeBackDailyChange();
     currentDay = &mondayEvents;
     ui->DailyEvents->clear();
@@ -185,6 +189,8 @@ void MainWindow::on_Monday_clicked()
 }
 void MainWindow::on_Tuesday_clicked()
 {
+    resetDayFont();
+    ui->Tuesday->setFlat(true);
     writeBackDailyChange();
     currentDay = &tuesdayEvents;
     ui->DailyEvents->clear();
@@ -194,6 +200,8 @@ void MainWindow::on_Tuesday_clicked()
 }
 void MainWindow::on_Wednesday_clicked()
 {
+    resetDayFont();
+    ui->Wednesday->setFlat(true);
     writeBackDailyChange();
     currentDay = &wednesdayEvents;
     ui->DailyEvents->clear();
@@ -203,6 +211,8 @@ void MainWindow::on_Wednesday_clicked()
 }
 void MainWindow::on_Thursday_clicked()
 {
+    resetDayFont();
+    ui->Thursday->setFlat(true);
     writeBackDailyChange();
     currentDay = &thursdayEvents;
     ui->DailyEvents->clear();
@@ -212,6 +222,8 @@ void MainWindow::on_Thursday_clicked()
 }
 void MainWindow::on_Friday_clicked()
 {
+    resetDayFont();
+    ui->Friday->setFlat(true);
     writeBackDailyChange();
     currentDay = &fridayEvents;
     ui->DailyEvents->clear();
@@ -221,6 +233,8 @@ void MainWindow::on_Friday_clicked()
 }
 void MainWindow::on_Saturday_clicked()
 {
+    resetDayFont();
+    ui->Saturday->setFlat(true);
     writeBackDailyChange();
     currentDay = &saturdayEvents;
     ui->DailyEvents->clear();
@@ -235,6 +249,15 @@ void MainWindow::writeBackDailyChange() {
         string toAdd = item->text().toStdString();
         currentDay->push_back(Event("0","0",toAdd));
     }
+}
+void MainWindow::resetDayFont() {
+    ui->Monday->setFlat(false);
+    ui->Tuesday->setFlat(false);
+    ui->Wednesday->setFlat(false);
+    ui->Thursday->setFlat(false);
+    ui->Friday->setFlat(false);
+    ui->Saturday->setFlat(false);
+    ui->Sunday->setFlat(false);
 }
 
 // Write backs for toDos
@@ -344,7 +367,7 @@ void MainWindow::on_DailyEvents_itemDoubleClicked(QListWidgetItem *item)
     ui->DailyEdit->setHidden(false);
     ui->DailyEdit->setEnabled(true);
     ui->DailyEdit->setFocus();
-    QString newAdd = GetNewInputWeekly();
+    QString newAdd = GetNewInputDaily();
     if (newAdd == "") {newAdd = item->text();}
     ui->DailyEdit->setHidden(true);
     ui->DailyEdit->setEnabled(false);
@@ -388,11 +411,12 @@ void MainWindow::on_AddFinancial_clicked()
     ui->FinancialToDo->addItem(newAdd);
 }
 void MainWindow::on_AddDaily_clicked()
+
 {
     ui->DailyEdit->setHidden(false);
     ui->DailyEdit->setEnabled(true);
     ui->DailyEdit->setFocus();
-    QString newAdd = GetNewInputWeekly();
+    QString newAdd = GetNewInputDaily();
     ui->DailyEdit->setHidden(true);
     ui->DailyEdit->setEnabled(false);
     ui->DailyEdit->clear();
@@ -416,6 +440,7 @@ void MainWindow::keyPressEvent(QKeyEvent* event) {
         emit EnterKeyPressed();
     }
     if (event->key() == Qt::Key_Delete) {
+        emit EnterKeyPressed(); // So that you don't delete a cell while editing
         // Get the widget that currently has focus
         QWidget* focusedWidget = this->focusWidget();
         // Check if the focused widget is a QListWidget

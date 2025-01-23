@@ -86,6 +86,7 @@ private:
     void writeBackFinancial();
     void writeBackPersonal();
     void writeBackWeekly();
+    void resetDayFont();
 
     Ui::MainWindow *ui;
 

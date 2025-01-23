@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/images">
-        <file>purplebackground</file>
+        <file>Chalkboard1</file>
+        <file>Chalkboard2</file>
+        <file>Chalkboard3</file>
     </qresource>
 </RCC>
