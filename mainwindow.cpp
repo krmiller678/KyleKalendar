@@ -244,6 +244,7 @@ void MainWindow::on_Saturday_clicked()
 }
 void MainWindow::writeBackDailyChange() {
     currentDay->clear();
+    emit EnterKeyPressed();
     for (unsigned int i = 0; i < ui->DailyEvents->count(); i++) {
         QListWidgetItem* item = ui->DailyEvents->item(i);
         string toAdd = item->text().toStdString();
@@ -264,19 +265,19 @@ void MainWindow::resetDayFont() {
 void MainWindow::writeBackWeekly() {
     weeklyToDos.clear();
     for (unsigned int i = 0; i < ui->WeeklyToDo->count(); i++) {
-        QListWidgetItem* item = ui->DailyEvents->item(i);
+        QListWidgetItem* item = ui->WeeklyToDo->item(i);
         string toAdd = item->text().toStdString();
         auto f = item->font();
-        personalToDos.push_back(ToDo(toAdd, f.strikeOut()));
+        weeklyToDos.push_back(ToDo(toAdd, f.strikeOut()));
     }
 }
 void MainWindow::writeBackFinancial() {
     financialToDos.clear();
     for (unsigned int i = 0; i < ui->FinancialToDo->count(); i++) {
-        QListWidgetItem* item = ui->DailyEvents->item(i);
+        QListWidgetItem* item = ui->FinancialToDo->item(i);
         string toAdd = item->text().toStdString();
         auto f = item->font();
-        personalToDos.push_back(ToDo(toAdd, f.strikeOut()));
+        financialToDos.push_back(ToDo(toAdd, f.strikeOut()));
     }
 }
 void MainWindow::writeBackPersonal() {

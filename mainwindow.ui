@@ -196,6 +196,9 @@ color:white;</string>
       <height>21</height>
      </rect>
     </property>
+    <property name="styleSheet">
+     <string notr="true"/>
+    </property>
     <property name="text">
      <string>MONDAY</string>
     </property>
@@ -203,6 +206,9 @@ color:white;</string>
      <bool>false</bool>
     </property>
     <property name="autoExclusive">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
      <bool>false</bool>
     </property>
    </widget>
@@ -214,6 +220,9 @@ color:white;</string>
       <width>111</width>
       <height>21</height>
      </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>TUESDAY</string>
@@ -300,7 +309,7 @@ color:white;</string>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">font: 12pt &quot;Segoe UI&quot;;</string>
+     <string notr="true"/>
     </property>
     <property name="placeholderText">
      <string>Enter your new item</string>
