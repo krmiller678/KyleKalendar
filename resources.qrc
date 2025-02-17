@@ -1,7 +1,3 @@
 <RCC>
-    <qresource prefix="/images">
-        <file>Chalkboard1</file>
-        <file>Chalkboard2</file>
-        <file>Chalkboard3</file>
-    </qresource>
+    <qresource prefix="/images"/>
 </RCC>
