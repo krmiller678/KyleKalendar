@@ -59,6 +59,8 @@ private slots:
 
     void on_AddWeekly_clicked();
 
+    void on_SAVE_clicked();
+
 private:
     // private variables - dailyEvents and toDos
     std::vector<Event> mondayEvents;

@@ -468,3 +468,23 @@ void MainWindow::keyPressEvent(QKeyEvent* event) {
 
     QMainWindow::keyPressEvent(event);  // Pass the event to the base class
 }
+
+void MainWindow::on_SAVE_clicked()
+{
+    writeBackFinancial();
+    writeBackPersonal();
+    writeBackWeekly();
+    ToDoWriteOut(weeklyToDos, "Weekly");
+    ToDoWriteOut(financialToDos, "Financial");
+    ToDoWriteOut(personalToDos, "Personal");
+
+    writeBackDailyChange();
+    EventWriteOut(mondayEvents, "Monday");
+    EventWriteOut(tuesdayEvents, "Tuesday");
+    EventWriteOut(wednesdayEvents, "Wednesday");
+    EventWriteOut(thursdayEvents, "Thursday");
+    EventWriteOut(fridayEvents, "Friday");
+    EventWriteOut(saturdayEvents, "Saturday");
+    EventWriteOut(sundayEvents, "Sunday");
+}
+
