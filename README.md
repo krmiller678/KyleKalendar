@@ -79,8 +79,9 @@ If you do pursue this option, ensure you create blank _toDos_ and _events_ direc
 - **Shift-Key** is reserved for striking through an item (when not editing or adding item)
 ### On Screen Buttons
 - **PlusButton** to add a new item to that Day's agenda or the Financial, Important, or Weekly sections
-- **<DAY> Button** to view the agenda items for that day  
-- **Exit Button** will close out of program, exitting normally and writing back to txt files  
+- **\<DAY\> Button** to view the agenda items for that day  
+- **Exit Button** will close out of program, exitting normally and writing back to txt files
+- **SAVE Button** will write back to txt files  
 
 ### Screen Elements
 - **DayOfWeek** will be _pushed_down_ when selected. Sunday is default day on launch
