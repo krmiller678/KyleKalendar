@@ -89,7 +89,7 @@ If you do pursue this option, ensure you create blank _toDos_ and _events_ direc
 **NOTE:** You can wipe out the calendar at any point in time by navigating to the _toDos_ and _events_ directories and deleting the *.txt files
 
 ## Planned Features
-- [ ] Save button
+- [X] Save button
 - [ ] Progress tracker for projects/classes
 - [ ] Auto load current day of week
 - [ ] Add in autosave feature
