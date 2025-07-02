@@ -70,6 +70,7 @@ private:
     std::vector<Event> fridayEvents;
     std::vector<Event> saturdayEvents;
     std::vector<Event> sundayEvents;
+    std::vector<Event> initialDayEvents;
 
     std::vector<ToDo> weeklyToDos;
     std::vector<ToDo> financialToDos;

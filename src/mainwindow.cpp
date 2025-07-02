@@ -6,6 +6,7 @@
 #include <iostream>
 #include <QKeyEvent>
 #include <QEventLoop>
+#include <ctime>
 using namespace std;
 
 MainWindow::MainWindow(QWidget *parent)
@@ -35,11 +36,56 @@ MainWindow::MainWindow(QWidget *parent)
     AddItemWeekly(weeklyToDos);
     AddItemFinancial(financialToDos);
 
-    for (unsigned int i = 0; i < sundayEvents.size(); i++) {
-        AddItemDaily(sundayEvents[i].GetTitle());
+    time_t t = time(nullptr);
+    tm* now = localtime(&t);
+    int weekday = now->tm_wday;
+
+    switch (weekday) {
+    case 0:
+        initialDayEvents = sundayEvents;
+        currentDay = &sundayEvents;
+        ui->Sunday->setFlat(true);
+        break;
+    case 1:
+        initialDayEvents = mondayEvents;
+        currentDay = &mondayEvents;
+        ui->Monday->setFlat(true);
+        break;
+    case 2:
+        initialDayEvents = tuesdayEvents;
+        currentDay = &tuesdayEvents;
+        ui->Tuesday->setFlat(true);
+        break;
+    case 3:
+        initialDayEvents = wednesdayEvents;
+        currentDay = &wednesdayEvents;
+        ui->Wednesday->setFlat(true);
+        break;
+    case 4:
+        initialDayEvents = thursdayEvents;
+        currentDay = &thursdayEvents;
+        ui->Thursday->setFlat(true);
+        break;
+    case 5:
+        initialDayEvents = fridayEvents;
+        currentDay = &fridayEvents;
+        ui->Friday->setFlat(true);
+        break;
+    case 6:
+        initialDayEvents = saturdayEvents;
+        currentDay = &saturdayEvents;
+        ui->Saturday->setFlat(true);
+        break;
+    default:
+        initialDayEvents = sundayEvents;
+        currentDay = &sundayEvents;
+        ui->Sunday->setFlat(true);
+        break;
     }
 
-    currentDay = &sundayEvents;
+    for (unsigned int i = 0; i < initialDayEvents.size(); i++) {
+        AddItemDaily(initialDayEvents[i].GetTitle());
+    }
 
 }
 
